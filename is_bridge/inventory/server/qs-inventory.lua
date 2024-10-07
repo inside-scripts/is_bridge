@@ -14,7 +14,7 @@ func.hasItem = function(src, name)
     if not count or count == 0 then return nil end
 
     return {
-        label = exports["qs-inventory"]:GetItemLabel(name)
+        label = exports["qs-inventory"]:GetItemLabel(name),
         count = count,
     }
 end
