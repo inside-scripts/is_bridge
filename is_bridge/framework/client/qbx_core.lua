@@ -1,15 +1,19 @@
 local framework = exports["qb-core"]:GetCoreObject()
+local resourceName = GetCurrentResourceName()
+local isBridge = GetResourceMetadata(resourceName, "name") == "is_bridge"
 func = {}
 
-RegisterNetEvent("QBCore:Client:OnJobUpdate", function(job)
-    TriggerEvent("is_bridge:updateJob", {
-        name = job.name or nil,
-        label = job.label or nil,
-        onDuty = job.onduty or false,
-        grade = job.grade.level or 0,
-        gradeName = job.grade.name or nil,
-    })
-end)
+if isBridge then
+    RegisterNetEvent("QBCore:Client:OnJobUpdate", function(job)
+        TriggerEvent("is_bridge:updateJob", {
+            name = job.name or nil,
+            label = job.label or nil,
+            onDuty = job.onduty or false,
+            grade = job.grade.level or 0,
+            gradeName = job.grade.name or nil,
+        })
+    end)
+end
 
 func.getPlayerData = function()
     local data = framework.Functions.GetPlayerData()
