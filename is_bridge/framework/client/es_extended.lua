@@ -1,15 +1,19 @@
 local framework = exports["es_extended"]:getSharedObject()
+local resourceName = GetCurrentResourceName()
+local isBridge = GetResourceMetadata(resourceName, "name") == "is_bridge"
 func = {}
 
-RegisterNetEvent('esx:setJob', function(job) 
-    TriggerEvent('is_bridge:updateJob', {
-        name = job.name or nil,
-        label = job.label or nil,
-        onDuty = true,
-        grade = job.grade or 0,
-        gradeName = job.grade_name or nil,
-    })
-end)
+if isBridge then
+    RegisterNetEvent('esx:setJob', function(job) 
+        TriggerEvent('is_bridge:updateJob', {
+            name = job.name or nil,
+            label = job.label or nil,
+            onDuty = true,
+            grade = job.grade or 0,
+            gradeName = job.grade_name or nil,
+        })
+    end)
+end
 
 func.getPlayerData = function()
     local data = framework.GetPlayerData()
