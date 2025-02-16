@@ -4,7 +4,7 @@ lua54 'yes'
 
 name 'is_bridge'
 author 'inside-scripts'
-version '1.0.3'
+version '1.0.4'
 repository 'https://github.com/inside-scripts/is_bridge'
 
 files {
