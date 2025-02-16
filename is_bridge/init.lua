@@ -53,7 +53,7 @@ local modules = {
         module = "keys",
         resources = {
             client = {
-                ["is_carlock"] = "is_carlock.lua",
+                ["is_vehiclekeys"] = "is_vehiclekeys.lua",
                 ["qb-vehiclekeys"] = "qb-vehiclekeys.lua",
                 ["qs-vehiclekeys"] = "qs-vehiclekeys.lua",
                 ["vehicles_keys"] = "vehicles_keys.lua",
@@ -62,7 +62,7 @@ local modules = {
                 ["okokGarage"] = "okokGarage.lua",
             },
             server = {
-                ["is_carlock"] = "is_carlock.lua",
+                ["is_vehiclekeys"] = "is_vehiclekeys.lua",
                 ["qb-vehiclekeys"] = "qb-vehiclekeys.lua",
                 ["qs-vehiclekeys"] = "qs-vehiclekeys.lua",
                 ["vehicles_keys"] = "vehicles_keys.lua",
