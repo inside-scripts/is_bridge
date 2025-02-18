@@ -30,6 +30,7 @@ local modules = {
                 ["qs-inventory"] = "qs-inventory.lua",
                 ["qb-inventory"] = "mixed.lua",
                 ["ox_inventory"] = "ox_inventory.lua",
+                ["jpr-inventory"] = "jpr-inventory.lua",
             },
         },
     },
